@@ -1,0 +1,16 @@
+Name: WorkflowTest0718
+SchemaVersion: "1.0"
+
+# Optional - Set automatic triggers.
+Triggers:
+  - Type: Push
+    Branches:
+      - dev
+
+# Required - Define action configurations.
+Actions:
+    Mock:
+        Identifier: aws/workflows-mock-gamma@v1
+        Inputs:
+            Sources:
+            - WorkflowSource
